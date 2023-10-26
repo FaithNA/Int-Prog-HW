@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.cnt{
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.image {
+    flex: 0 0 100%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.slider-navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* ... Previous and next arrows styles */
+.arrow {
+    font-size: 32px;
+    color: #5bc0de;
+    cursor: pointer;
+    padding: 5px;
+}
+
+

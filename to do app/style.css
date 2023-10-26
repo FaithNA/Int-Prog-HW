@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+ 
+}
+
+.container {
+    width: 400px;
+    margin: 20px auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.delete {
+    color: black;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add {
+    margin-top: 20px;
+}
+
+#new {
+    width: 70%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#button {
+    color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}

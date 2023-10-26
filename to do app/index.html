@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>To-Do App</title>
+</head>
+<body>
+    <div class="container">
+        <h3>To-Do App</h3>
+        <div id="list">
+            <div class="task">
+                <input type="checkbox">
+                <p>Sample Task</p>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+        <div class="add">
+            <input type="text" id="new" placeholder="Add a new task">
+            <button id="button">Add</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const taskList = document.getElementById('list');
+    const addButton = document.getElementById('button');
+    const newTaskInput = document.getElementById('new');
+
+    addButton.addEventListener('click', function () {
+        const taskText = newTaskInput.value.trim();
+        if (taskText) {
+            const task = createTaskElement(taskText);
+            taskList.appendChild(task);
+            newTaskInput.value = '';
+        }
+    });
+
+    taskList.addEventListener('click', function (e) {
+        if (e.target.className === 'delete') {
+            e.target.parentElement.remove();
+        }
+    });
+
+    function createTaskElement(taskText) {
+        const task = document.createElement('div');
+        task.className = 'task';
+        task.innerHTML = `
+            <input type="checkbox">
+            <p>${taskText}</p>
+            <button class="delete">Delete</button>
+        `;
+        return task;
+    }
+});
+
+    </script>
+</body>
+</html>
